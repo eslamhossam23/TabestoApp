@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/upperSpace"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/listImage"
+        android:layout_below="@+id/upperSpace"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:maxWidth="80dp"
+        android:maxHeight="80dp" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_below="@+id/listImage"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:fontFamily="cursive" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/lowerSpace"
+        android:layout_below="@+id/description"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/price"
+        android:layout_above="@+id/description"
+        android:layout_toEndOf="@+id/listImage"
+        android:textSize="14sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_above="@+id/price"
+        android:layout_alignStart="@+id/price"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Commander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commander"
+        android:visibility="invisible"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignBottom="@+id/price"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
